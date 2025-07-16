@@ -498,7 +498,7 @@
     <div id="popup-poster" class="popup-overlay">
   <div class="popup-content">
     <span class="close-btn" id="closePosterBtn">&times;</span>
-    <img src="images/workshop.jpg" alt="Promo Poster" class="popup-image" />
+    <img src="images/gem.jpg" alt="Promo Poster" class="popup-image" />
   </div>
 </div>
 
@@ -528,12 +528,40 @@
 
   <!-- Hero Header -->
    <header id="hero" class="hero-header">
+    
   <div class="overlay"></div>
   <div class="header-content">
     <h1>TechnovaHub</h1>
     <p><span class="highlight">Empowering Minds</span></p>
   </div>
 </header>
+<br>
+<br>
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <h2 class="section-title" data-aos="fade-up">Our VISION & Mission</h2>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card">
+            <h3 class="card-title">Vision</h3>
+            <p>Our vision is to be a nationally acclaimed hub for excellence in technology education, IT services, and innovation powered by automation.
+<br>
+<br>
+We are committed to developing future-ready talent and delivering smart, transformative solutions that drive digital advancement across industries.
+</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card">
+            <h3 class="card-title">Mission</h3>
+            <p>To empower learners with industryrelevant tech skills through hands-on training and real-time projects. We bridge the gap between academic knowledge and practical application to build future-ready talent.
+<br>
+<br> To equip businesses with intelligent automation and IT solutions designed to streamline operations, boost sales performance, and enhance customer satisfaction.
+</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
 
   <!-- Courses Section -->
   <section id="courses">
@@ -594,6 +622,12 @@
             <p>We have an extraordinary Research and Development facilities.</p>
           </div>
         </div>
+         <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="card">
+            <h3 class="card-title">Soft Skills</h3>
+            <p>We are Providing a Soft Skills training to Students, that helps to enhance a Student lifestyle</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -636,17 +670,121 @@
     </div>
   </div>
 </section>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Scrolling Text</title>
+    <style>
+        /* Container styling */
+        .scrolling-banner {
+            width: 100%;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            padding: 30px 0;
+            margin: 40px 0;
+            position: relative;
+        }
+        
+        /* Horizontal scrolling track */
+        .scrolling-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scrollHorizontal 20s linear infinite;
+        }
+        
+        /* Text styling */
+        .scrolling-text {
+            display: inline-block;
+            font-family: 'Arial', sans-serif;
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #222;
+            padding: 0 50px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        /* Animation */
+        @keyframes scrollHorizontal {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        
+        /* Gradient fade effects on sides */
+        .scrolling-banner::before,
+        .scrolling-banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100px;
+            z-index: 2;
+        }
+        
+        .scrolling-banner::before {
+            left: 0;
+            background: linear-gradient(to right, #f0f0f0, rgba(240, 240, 240, 0));
+        }
+        
+        .scrolling-banner::after {
+            right: 0;
+            background: linear-gradient(to left, #f0f0f0, rgba(240, 240, 240, 0));
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .scrolling-text {
+                font-size: 2rem;
+                padding: 0 30px;
+            }
+            
+            .scrolling-banner::before,
+            .scrolling-banner::after {
+                width: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Horizontal Scrolling Banner -->
+    <div class="scrolling-banner">
+        <div class="scrolling-content">
+            <span class="scrolling-text">WE AUTOMATE THE ROUTINE, SO YOU CAN INNOVATE THE EXTRAORDINARY!!!</span>
+            <span class="scrolling-text">WE AUTOMATE THE ROUTINE, SO YOU CAN INNOVATE THE EXTRAORDINARY!!!</span>
+             <span class="scrolling-text">WE AUTOMATE THE ROUTINE, SO YOU CAN INNOVATE THE EXTRAORDINARY!!!</span>
+        </div>
+    </div>
+</body>
+</html>
 
   <!-- About Section -->
   <section id="about">
     <h2 class="section-title" data-aos="fade-up">About Us</h2>
     <div class="container" data-aos="fade-up" data-aos-delay="100">
       <p style="max-width: 720px; margin: 0 auto; font-size: 1.15rem; line-height: 1.7; color: #475569;">
-        TechnovaHub is a leading tech education platform committed to empowering students,
-        graduates, and business professionals through innovative and practical learning.
-        Our mission is to bridge the gap between academic knowledge and industry demands.
+        TechnovaHub, a unit of Aroun Groups,
+is a premier provider of technology
+education and software solutions.We
+specialise in delivering practical,
+industry-aligned training for students,
+professionals, and entrepreneurs—
+ensuring a workforce equipped with
+real-world skills.<br>
+<br>
+ Our services also extend to businesses,
+offering tailored tech solutions that
+drive efficiency, innovation, and
+growth.
+
       </p>
+      <br><p>
+     </p>
     </div>
   </section>
   <section id="facilities" class="facilities-section">
@@ -721,16 +859,20 @@
   <div class="container">
     <div class="stats-grid">
       <div class="stat-box">
-        <h3><span class="counter" data-target="150">0</span>+</h3>
+        <h3><span class="counter" data-target="300">0</span>+</h3>
         <p>Students Trained</p>
       </div>
       <div class="stat-box">
-        <h3><span class="counter" data-target="5">0</span>+</h3>
+        <h3><span class="counter" data-target="10">0</span>+</h3>
         <p>Awards Won</p>
       </div>
       <div class="stat-box">
-        <h3><span class="counter" data-target="20">0</span>+</h3>
+        <h3><span class="counter" data-target="15">0</span>+</h3>
         <p>Courses Offered</p>
+      </div>
+      <div class="stat-box">
+        <h3><span class="counter" data-target="25">0</span>+</h3>
+        <p>Projects Achieved</p>
       </div>
     </div>
   </div>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Verification</title>
+    <style>
+        .certificate-verify {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        
+        .certificate-verify h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        .input-group input {
+            padding: 10px;
+            width: 70%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .input-group button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 4px;
+            display: none;
+        }
+        
+        .valid {
+            background-color: #dff0d8;
+            color: #3c763d;
+            border: 1px solid #d6e9c6;
+        }
+        
+        .invalid {
+            background-color: #f2dede;
+            color: #a94442;
+            border: 1px solid #ebccd1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Certificate Verification Section -->
+    <section class="certificate-verify">
+        <h2>Verify Your Certificate</h2>
+        <p>Enter your certificate number to verify its authenticity</p>
+        
+        <div class="input-group">
+            <input type="text" id="certificateNumber" placeholder="Enter certificate number">
+            <button onclick="verifyCertificate()">Verify</button>
+        </div>
+        
+        <div id="result" class="result"></div>
+    </section>
+
+    <script>
+        // Sample certificate data (in a real system, this would come from a database)
+        const certificateDatabase = {
+            "TH-0101": "Sakthi deepashika",
+            "TH-0102": "Sujitha",
+            "TH-0103": "Deepa",
+            // Add more sample certificates as needed
+        };
+
+        function verifyCertificate() {
+            const certNumber = document.getElementById("certificateNumber").value.trim();
+            const resultDiv = document.getElementById("result");
+            
+            if (!certNumber) {
+                alert("Please enter a certificate number");
+                return;
+            }
+            
+            // Clear previous results
+            resultDiv.style.display = "none";
+            resultDiv.className = "result";
+            
+            // Check if certificate exists
+            if (certificateDatabase[certNumber]) {
+                resultDiv.innerHTML = `<strong>Valid Certificate</strong><br>
+                                      Certificate Number: ${certNumber}<br>
+                                      Student Name: ${certificateDatabase[certNumber]}`;
+                resultDiv.classList.add("valid");
+            } else {
+                resultDiv.innerHTML = `<strong>Invalid Certificate</strong><br>
+                                      The certificate number ${certNumber} was not found in our records.`;
+                resultDiv.classList.add("invalid");
+            }
+            
+            resultDiv.style.display = "block";
+        }
+    </script>
+</body>
+</html>
